@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Simple Blog Project</title>
+</head>
+<body>
+<div class="container">
+    <h2>Welcome To Our Blog</h2>
+    {% for post in posts %}
+    <div class="col-sm-12">
+        <a href="{{ post.absolute_url }}"><h4>{{ post.title }}--{{ post.id }}</h4></a>
+        <p>{{ post.content }}</p>
+        <em>{{ post.updated }}</em>
+    </div>
+    {% endfor %}
+</div>
+
+
+</body>
+</html>

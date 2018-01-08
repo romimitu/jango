@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ details.title }}</title>
+</head>
+<body>
+<div class="container">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor s%}
+    </ul>
+    {% endif %}
+    <div class="col-sm-12">
+        <h4>{{ details.title }}</h4>
+        <p>{{ details.content }}</p>
+        <em>{{ details.updated }}</em>
+    </div>
+</div>
+</body>
+</html>
